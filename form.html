@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="user" placeholder="Username" type="text"><br><br>
+    <input id="mail" placeholder="E-mail" type="text"><br><br>
+    <input id="pass" placeholder="Password" type="password"><br><br>
+    <input id="confirm" placeholder="Confirm Password" type="password"><br><br>
+    <input id="agree" type="checkbox">
+    <span>I agree </span><br><br>
+    <button onclick="reg()">Register</button>
+
+    
+</body>
+</html>
+
+
+<script>
+    let user = document.getElementById("user")
+    let mail = document.getElementById("mail")
+    let pass = document.getElementById("pass")
+    let confirm = document.getElementById("confirm")
+    let agree = document.getElementById("agree")
+
+    function reg(){
+        if (user.value == 0) {
+            alert("Username Required")
+        }
+
+        if (mail.value == 0) {
+            alert("E-mail Required")
+        }
+
+        if(pass.value == confirm.value){
+            
+        }else{
+            alert("Password doesn't match")
+        }
+
+    }
+
+</script>
