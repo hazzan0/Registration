@@ -25,21 +25,39 @@
     let pass = document.getElementById("pass")
     let confirm = document.getElementById("confirm")
     let agree = document.getElementById("agree")
+    let allUser = [];
 
     function reg(){
-        if (user.value == 0) {
-            alert("Username Required")
+        let data = {
+            username: user.value,
+            email: mail.value,
+            password: pass.value,
+            terms: agree.checked
         }
-
-        if (mail.value == 0) {
-            alert("E-mail Required")
-        }
-
-        if(pass.value == confirm.value){
-            
+        console.log(data);
+        if(user.value == "" || mail.value == "" || pass.value == ""){
+            alert("Input field required")
+        }else if(pass.value != confirm.value){
+            alert("Password does not match")
+        }else if(agree.checked != true){
+            alert("Agree to terms")
         }else{
-            alert("Password doesn't match")
+            allUser.push(data);
+            alert("Registration Completed")
         }
+        // if (user.value == 0) {
+        //     alert("Username Required")
+        // }
+
+        // if (mail.value == 0) {
+        //     alert("E-mail Required")
+        // }
+
+        // if(pass.value == confirm.value){
+            
+        // }else{
+        //     alert("Password doesn't match")
+        // }
 
     }
 
